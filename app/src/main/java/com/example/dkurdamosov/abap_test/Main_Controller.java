@@ -1,6 +1,7 @@
 package com.example.dkurdamosov.abap_test;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.animation.Animation;
@@ -29,7 +30,6 @@ import java.util.Random;
     private  XmlParser xmlParser;
     private ArrayList<Question> questionList;
     final private  String fileName = "questions";
-    private Context context;
     private int questionNumber;
     private String correctAnswer;
     private Question question;
@@ -122,19 +122,10 @@ import java.util.Random;
         }
         else {
 //Выдаем результаты
-            AlertDialog.Builder builder = new AlertDialog.Builder(Main.getContext());
-            builder.setTitle("Ваши результаты")
-                    .setMessage("Все очень хуево")
-
-                    .setCancelable(false)
-                    .setNegativeButton("ОК",
-                            new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    dialog.cancel();
-                                }
-                            });
-            AlertDialog alert = builder.create();
-            alert.show();
+            //// TODO: 24.10.2017  start activity results
+            Intent intent = new Intent(Main.getContext(), Start.class);
+            intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+            Main.getContext().startActivity(intent);
         }
     }
 }
