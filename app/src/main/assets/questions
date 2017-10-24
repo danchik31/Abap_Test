@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questions>
+    <Question text="Если в таблице отсутствует поле MANDT, это означает что таблица">
+        <answer1>безмандантная</answer1>
+        <answer2>является структурой</answer2>
+        <answer3>клиенто-независама</answer3>
+        <answer4>ошибочна</answer4>
+        <corr>answer3</corr>
+    </Question>
+    <Question text="Поле типа T имеет следующий внутренний формат:">
+        <answer1>MMHHSS</answer1>
+        <answer2>SSMMHH</answer2>
+        <answer3>HHMMSS</answer3>
+        <answer4>HHSSMM</answer4>
+        <corr>answer3</corr>
+    </Question>
+    <Question text="Что будет содержать системное поле SY-DBCNT после выполнения:
+ SELECT COUNT(*)
+ FROM mara
+ WHERE matnr = '000000001000000000'.">
+        <answer1>Количество найденных записей</answer1>
+        <answer2>Наличие записей</answer2>
+        <answer3>Количество записей, не удовлетворяющих условию</answer3>
+        <answer4>0</answer4>
+        <corr>answer4</corr>
+    </Question>
+</Questions>
