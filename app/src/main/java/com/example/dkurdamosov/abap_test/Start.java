@@ -13,13 +13,13 @@ import android.widget.Button;
  */
 
 public class Start extends AppCompatActivity implements View.OnClickListener{
-private Button start;
+private Button start_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
-        start=(Button) start.findViewById(R.id.start);
-        start.setOnClickListener(this);
+        start_btn = (Button)findViewById(R.id.start_btn);
+        start_btn.setOnClickListener(this);
     }
 
     @Override
