@@ -34,6 +34,23 @@ import java.util.Random;
     private String correctAnswer;
     private Question question;
 
+    public static int getCountTrue() {
+        return countTrue;
+    }
+
+    public static int getCountFalse() {
+        return countFalse;
+    }
+
+    private static int countTrue;
+    private static int countFalse;
+
+    public static int getPercent() {
+        return percent;
+    }
+
+    private static int percent;
+    private int allQuestionCount;
 
     public Main_Controller(Main main){
         animAlpha = AnimationUtils.loadAnimation( main, R.anim.alpha);
@@ -54,6 +71,7 @@ import java.util.Random;
         try {
             xmlParser = new XmlParser( fileName);
             questionList = xmlParser.getQuestionsList();
+            allQuestionCount=questionList.size();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (XmlPullParserException e) {
@@ -86,9 +104,11 @@ import java.util.Random;
 
         if (question.isCorrectAnswer(view.getId())){
             answer_active.setBackgroundResource(R.drawable.back_true);
+            countTrue+=1;
         }
             else{
             answer_active.setBackgroundResource(R.drawable.back_false);
+            countFalse+=1;
         }
 
         answer_active.startAnimation(animAlpha);
@@ -101,9 +121,10 @@ import java.util.Random;
         Random random = new Random();
         int size = questionList.size();
         int index;
-        questionNumber+=1;
-        String val="Вопрос № "+questionNumber;
+
         if (size != 0) {
+            questionNumber+=1;
+            String val="Вопрос "+questionNumber+"/"+allQuestionCount;
             index = random.nextInt(size);
             question = questionList.get(index);
             correctAnswer=question.getCorrect_answer();
@@ -123,6 +144,7 @@ import java.util.Random;
         else {
 //Выдаем результаты
             //// TODO: 24.10.2017  start activity results
+            percent=(countTrue*100)/allQuestionCount;
             Intent intent = new Intent(Main.getContext(), Result.class);
             intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
             Main.getContext().startActivity(intent);
