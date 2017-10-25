@@ -54,8 +54,8 @@
         android:text="A: ABAP"
         android:background="@drawable/back"
         android:layout_margin="5dp"
+        android:gravity="fill_vertical"
         android:paddingLeft="10dp"
-        android:paddingTop="8dp"
         android:textColor="@android:color/black" />
 
     <TextView
@@ -68,7 +68,7 @@
         android:background="@drawable/back"
         android:layout_margin="5dp"
         android:paddingLeft="10dp"
-        android:paddingTop="8dp"
+        android:gravity="fill_vertical"
         android:textColor="@android:color/black"/>
 
     <TextView
@@ -81,7 +81,7 @@
         android:background="@drawable/back"
         android:layout_margin="5dp"
         android:paddingLeft="10dp"
-        android:paddingTop="8dp"
+        android:gravity="fill_vertical"
         android:textColor="@android:color/black"/>
 
     <TextView
@@ -94,7 +94,7 @@
         android:background="@drawable/back"
         android:layout_margin="5dp"
         android:paddingLeft="10dp"
-        android:paddingTop="8dp"
+        android:gravity="fill_vertical"
         android:textColor="@android:color/black"/>
     <View
         android:layout_width="match_parent"

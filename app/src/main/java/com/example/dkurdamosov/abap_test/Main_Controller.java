@@ -130,10 +130,10 @@ import java.util.Random;
             correctAnswer=question.getCorrect_answer();
             question_cnt.setText(val);
             questionText.setText(question.getQuestion_text());
-            answer_1.setText(question.getAnswer1());
-            answer_2.setText(question.getAnswer2());
-            answer_3.setText(question.getAnswer3());
-            answer_4.setText(question.getAnswer4());
+            answer_1.setText("A:"+" "+question.getAnswer1());
+            answer_2.setText("B:"+" "+question.getAnswer2());
+            answer_3.setText("C:"+" "+question.getAnswer3());
+            answer_4.setText("D:"+" "+question.getAnswer4());
             answer_1.setClickable(true);
             answer_2.setClickable(true);
             answer_3.setClickable(true);
@@ -146,7 +146,7 @@ import java.util.Random;
             //// TODO: 24.10.2017  start activity results
             percent=(countTrue*100)/allQuestionCount;
             Intent intent = new Intent(Main.getContext(), Result.class);
-            intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TASK);
             Main.getContext().startActivity(intent);
         }
     }

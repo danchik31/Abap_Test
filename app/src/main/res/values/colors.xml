@@ -7,4 +7,5 @@
     <color name="colorResAnswers">#2e7fe2</color>
     <color name="colorTrue">#b8379603</color>
     <color name="colorFalse">#b8f2273b</color>
+    <color name="colorButtonPressed">#cee9e9e9</color>
 </resources>
