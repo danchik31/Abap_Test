@@ -5,4 +5,6 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorResult">#26c962</color>
     <color name="colorResAnswers">#2e7fe2</color>
+    <color name="colorTrue">#b8379603</color>
+    <color name="colorFalse">#b8f2273b</color>
 </resources>
