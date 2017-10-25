@@ -33,7 +33,7 @@
         android:id="@+id/question"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="6"
+        android:layout_weight="5"
         android:text="Как называется система ABAP555"
         android:textColor="?attr/actionModeSplitBackground"
         android:gravity="center"
@@ -50,7 +50,7 @@
         android:clickable="true"
         android:text="A: ABAP"
         android:background="@drawable/back"
-        android:layout_margin="1dp"
+        android:layout_margin="10dp"
         android:paddingLeft="10dp"
         android:paddingTop="8dp"
         android:textColor="@android:color/black" />
@@ -63,7 +63,7 @@
         android:clickable="true"
         android:text="B: ABAP"
         android:background="@drawable/back"
-        android:layout_margin="1dp"
+        android:layout_margin="10dp"
         android:paddingLeft="10dp"
         android:paddingTop="8dp"
         android:textColor="@android:color/black"/>
@@ -76,7 +76,7 @@
         android:clickable="true"
         android:text="C: ABAP"
         android:background="@drawable/back"
-        android:layout_margin="1dp"
+        android:layout_margin="10dp"
         android:paddingLeft="10dp"
         android:paddingTop="8dp"
         android:textColor="@android:color/black"/>
@@ -89,8 +89,11 @@
         android:clickable="true"
         android:text="D: ABAP"
         android:background="@drawable/back"
-        android:layout_margin="1dp"
+        android:layout_margin="10dp"
         android:paddingLeft="10dp"
         android:paddingTop="8dp"
         android:textColor="@android:color/black"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="30dp"></View>
 </LinearLayout>
