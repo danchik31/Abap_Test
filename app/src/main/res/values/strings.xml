@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">TAW7_10 ABAP</string>
     <string name="result" >Ваш результат</string>
-    <string name="true_count" >количество правильных ответов</string>
-    <string name="false_count" >количество неправильных ответов</string>
+    <string name="true_count" >количество правильных ответов:</string>
+    <string name="false_count" >количество неправильных ответов:</string>
 </resources>
