@@ -123,7 +123,7 @@ import java.util.Random;
         else {
 //Выдаем результаты
             //// TODO: 24.10.2017  start activity results
-            Intent intent = new Intent(Main.getContext(), Start.class);
+            Intent intent = new Intent(Main.getContext(), Result.class);
             intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
             Main.getContext().startActivity(intent);
         }
