@@ -25,6 +25,7 @@ private Button start_btn;
     @Override
     public void onClick(View view) {
         Intent intent = new Intent(this, Main.class);
+        intent.addFlags(intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
     }
 }

@@ -146,7 +146,7 @@ import java.util.Random;
             //// TODO: 24.10.2017  start activity results
             percent=(countTrue*100)/allQuestionCount;
             Intent intent = new Intent(Main.getContext(), Result.class);
-            intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TASK);
+
             Main.getContext().startActivity(intent);
         }
     }
