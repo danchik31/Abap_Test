@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Questions>
+<Question text="Which of the following tasks does the BADI implementing class perform?">
+<answer1>Filtering</answer1>
+<answer2>Sequencing</answer2>
+<answer3>Inserting</answer3>
+<answer4>Deleting </answer4>
+<corr>answer1</corr>
+</Question>
+<Question text="You always want to check the user authorization for data entered in an input field of a selection">
+  <answer1>In the event block AT SELECTION-SCREEN</answer1>
+  <answer2>In the event block AT SELECTION-SCREEN OUTPUT</answer2>
+  <answer3>In the event block INITIALIZATION</answer3>
+  <answer4>In the event block AT SELECTION-SCREEN on VALUE-REQUEST</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="What is the system field for the current date?">
+  <answer1>SY-DATUM </answer1>
+  <answer2>SY-DATE </answer2>
+  <answer3>SY-DATID </answer3>
+  <answer4>SY-SDATE </answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="The following code indicates:  SELECT fld1 fld2 FROM tab1 APPENDING TABLE itab WHERE fld1 IN sfld1.">
+  <answer1>Add rows to the existing rows of itab</answer1>
+  <answer2>Add rows to itab after first deleting any existing rows of itab</answer2>
+  <answer3>Select rows from tab1 for matching itab entries</answer3>
+  <answer4>Nothing, this is a syntax error</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="TO include database-specific SQL statements within an ABAP program, code them between:">
+  <answer1>NATIVE SQL_ENDNATIVE</answer1>
+  <answer2>DB SQL_ENDDB</answer2>
+  <answer3>SELECT_ENDSELECT</answer3>
+  <answer4>EXEC SQL_ENDEXEC</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="What can you use to achieve polymorphism?">
+  <answer1>Events</answer1>
+  <answer2>Subroutines</answer2>
+  <answer3>Inheritance</answer3>
+  <answer4>Reports</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="What happens when an authorization check fails?">
+  <answer1>The program is terminated</answer1>
+  <answer2>The system field SY-SUBRC is set to a value other than zero</answer2>
+  <answer3>A type E message is displayed</answer3>
+  <answer4>A CX_AUTH_FAILED type exception is raised</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="Which of the following predefined ABAP types is incomplete?">
+  <answer1>F</answer1>
+  <answer2>P</answer2>
+  <answer3>XSTRING</answer3>
+  <answer4>STRING</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="You created a transparent table and during activation got a warning message 'Enhancement
+category for table missing&quot;.
+What do you have to do to eliminate the warning message?
+">
+  <answer1>Select any option other than Not Classified from the enhancement category</answer1>
+  <answer2>Change the Data Class and Size category in the technical settings</answer2>
+  <answer3>Provide the correct reference field for the Currency or Quantity field</answer3>
+  <answer4>Select the option Not Classified from the enhancement category</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="How is an ABAP program with several dialog steps executed?">
+  <answer1>The program is always executed in just one dialog work process without roll out</answer1>
+  <answer2>The ABAP dispatcher takes over the entire execution without assigning any work process</answer2>
+  <answer3>The program is always executed in just one dialog work process with roll out</answer3>
+  <answer4>Usually, dialog steps are assigned to different dialog work processes</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="You want to display a dialog box in your ABAP program. Which statement do you use?">
+  <answer1>WINDOW 200 STARTING AT 5 5</answer1>
+  <answer2>SET SCREEN 200</answer2>
+  <answer3>CALL SCREEN 200</answer3>
+  <answer4>CALL SCREEN 200 STARTING AT 5 5</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="What is the SAP recommended naming convention for append structures of standard SAP tables?">
+  <answer1>The name of the append structure must start with ZA</answer1>
+  <answer2>The components of an append structure should start with ZZ or YY</answer2>
+  <answer3>The components of an append structure should start with Z or Y</answer3>
+  <answer4>The name of the append structure must start with ZZ or YY</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="To which ABAP Dictionary definition can you assign fixed values?">
+  <answer1>Data element</answer1>
+  <answer2>Field of a transparent table</answer2>
+  <answer3>Component of a structure</answer3>
+  <answer4>Domain</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="Which of the following statements dynamically changes the data type of field z1?">
+  <answer1>Assign z1 to &lt;fs&gt; casting</answer1>
+  <answer2>Assign z1 to &lt;fs&gt;</answer2>
+  <answer3>Move z1 to &lt;fs&gt;</answer3>
+  <answer4>Unassign &lt;fs&gt;</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="What do global types and local types have in common?">
+  <answer1>Documentation</answer1>
+  <answer2>Field labels</answer2>
+  <answer3>Search help</answer3>
+  <answer4>Technical information</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="Where can you set the GUI status and the GUI title for a classical screen (dynpro)?">
+  <answer1>In a module called from PBO of the screen</answer1>
+  <answer2>In the attributes of the screen</answer2>
+  <answer3>In the properties of the related header UI element</answer3>
+  <answer4>In a module called from PAI of the screen</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="In regard to SET PF-STATUS, you can deactivate unwanted function codes by using">
+  <answer1>EXCLUDING</answer1>
+  <answer2>IMMEDIATELY</answer2>
+  <answer3>WITHOUT</answer3>
+  <answer4>HIDE</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="In which database table type is there a one-to-one relationship between the Dictionary table definition and the relevant physical table in the database? ">
+  <answer1>Cluster table</answer1>
+  <answer2>Pooled table</answer2>
+  <answer3>Transparent table</answer3>
+  <answer4>Internal table</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="A custom transparent table was created with delivery class A and a table maintenance view was generated for this table. You change the delivery class to C and the table is activated successfully. What additional steps do you have to complete? ">
+  <answer1>Maintain and transport the table using the Maintain Table Views transaction (SM30)</answer1>
+  <answer2>Activate and adjust the database</answer2>
+  <answer3>Regenerate the existing maintenance view and adjust the table</answer3>
+  <answer4>Delete the original maintenance view and then create and generate a new one</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="You want to read data from two database tables A and B using a database join. Database table B contains details for data records stored in database table A. Your result should contain all combinations of matching rows from A and B plus all rows from A that do not have matching rows in B. Which statement do you use? ">
+  <answer1>SELECT '' FROM a JOIN b ''</answer1>
+  <answer2>SELECT '' FROM a INNER JOIN b ''</answer2>
+  <answer3>SELECT '' FROM b RIGHT OUTER JOIN a ''</answer3>
+  <answer4>SELECT '' FROM b RIGHT OUTER JOIN a ''</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="In the technical settings for a transparent table, buffering is switched on and single record buffering is selected. Which statement uses the buffered data assuming that the WHERE clause contains restrictions for all key fields? ">
+  <answer1>SELECT '' . ENDSELECT</answer1>
+  <answer2>SELECT SINGLE '' </answer2>
+  <answer3>SELECT '' INTO TABLE ''</answer3>
+  <answer4>SELECT SINGLE '' FOR UPDATE</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="What is mandatory for automatic data transport between a variable and an input field on a classical screen (dynpro)? ">
+  <answer1>The variable must be declared using the DATA statement</answer1>
+  <answer2>The property OUTPUT of the input field must be set</answer2>
+  <answer3>The variable must be declared using the TABLES statement</answer3>
+  <answer4>The name of the variable and the name of the input field must be identical</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="You want to loop over an internal table without copying each table row to a work area. How can you achieve this using a field symbol? ">
+  <answer1>LOOP AT &lt;itab&gt; REFERENCE INTO &lt;field_symbol&gt;. ENDLOOP</answer1>
+  <answer2>LOOP AT &lt;itab&gt; ASSIGNING &lt;field_symbol&gt;. ENDLOOP</answer2>
+  <answer3>LOOP AT &lt;itab&gt; TRANSPORTING INTO &lt;field_symbol&gt;. ENDLOOP</answer3>
+  <answer4>LOOP AT &lt;itab&gt; INTO &lt;field_symbol&gt;. ENDLOOP</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="You have defined a classical screen (dynpro) with mandatory input fields. You want to exit the screen using the Cancel button even if not all of the mandatory fields have been filled. What is necessary to achieve this? ">
+  <answer1>Set the function type assigned to the Cancel button to S and handle it in a module with the addition AT EXIT-COMMAND</answer1>
+  <answer2>Assign function type E to the Cancel button and handle it in a module with the addition AT EXIT-COMMAND</answer2>
+  <answer3>Set the function code assigned to the Cancel button to CANCEL and handle it in a module with the addition AT EXIT-COMMAND</answer3>
+  <answer4>Use the LOOP AT SCREEN. ... ENDLOOP statement to set the "required" property of the input fields to zero</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="How can you maintain documentation for input fields on your screen?">
+  <answer1>Add documentation to the SCREEN table at PROCESS BEFORE OUTPUT (PBO)</answer1>
+  <answer2>Add documentation to the SCREEN table at PROCESS AFTER INPUT (PAI)</answer2>
+  <answer3>Add documentation to the underlying data element</answer3>
+  <answer4>Define text tables for the underlying structure</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="What is the purpose of implicit enhancement points?">
+  <answer1>To add fields to an SAP database table</answer1>
+  <answer2>To add code to a standard SAP program</answer2>
+  <answer3>To change code in a standard SAP program</answer3>
+  <answer4>To create a secondary index for an SAP database table</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="When do you need to use the GROUP BY clause in the SELECT statement?">
+  <answer1>If you want to redefine the sequence of the columns in the result set</answer1>
+  <answer2>If you want to use aggregate functions and all components in the field list are aggregate functions</answer2>
+  <answer3>If you want to use ORDER BY to specify a sub-order</answer3>
+  <answer4>If you want to use aggregate functions and at least one component in the field list is a column identifie</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="You create a function group ZATP. What is the name of the corresponding main program?">
+  <answer1>ZATP</answer1>
+  <answer2>SAPLZATP</answer2>
+  <answer3>SAPMZATP</answer3>
+  <answer4>SAPFZATP</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="A field declared as type T has the following internal representation:">
+  <answer1>SSMMHH</answer1>
+  <answer2>HHMMSS</answer2>
+  <answer3>MMHHSS</answer3>
+  <answer4>HHSSMM</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="In regard to field selection, what option of the SELECT statement is required?">
+  <answer1>FOR ALL ENTRIES</answer1>
+  <answer2>WHERE</answer2>
+  <answer3>INTO</answer3>
+  <answer4>MOVE-CORRESPONDING</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="You have written a program to output data using the ALV grid control. Which sequence of steps should be executed at runtime? ">
+  <answer1>1. Create a container object
+2. Create a grid object
+3. Pass data to the grid object</answer1>
+  <answer2>1. Create a grid object
+2. Pass data to the grid object
+3. Create a container object</answer2>
+  <answer3>1. Pass data to the grid object
+2. Create a container object
+3. Create a grid object</answer3>
+  <answer4>1. Create a grid object
+2. Create a container object
+3. Pass data to the grid object</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="You have 2 objects: O1 of type class C1 and O2 of type class C2. Class C2 is a subclass of class C1. Which of the following statements implements an up cast? ">
+  <answer1>MOVE O1 ?TO O2</answer1>
+  <answer2>O2 ?= O1</answer2>
+  <answer3>MOVE O1 TO O2</answer3>
+  <answer4>O1 = O2</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="How do you program an input validation on a selection screen that allows users to correct their input? ">
+  <answer1>Implement the check at the event AT SELECTION-SCREEN OUTPUT. In case of an input error, a type E MESSAGE must be displayed</answer1>
+  <answer2>Implement a check at the event AT SELECTION-SCREEN. In case of an input error, a type E MESSAGE must be displayed</answer2>
+  <answer3>Implement the check at the event END-OF-SELECTION. In case of an input error, a type E MESSAGE must be displayed</answer3>
+  <answer4>Implement the check at the event AT SELECTION-SCREEN. In case of an input error, a type A MESSAGE must be displayed</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="To select all database entries for a certain WHERE clause into an internal table in one step, use">
+  <answer1>SELECT * INTO TABLE itab</answer1>
+  <answer2>SELECT * INTO itab</answer2>
+  <answer3>SELECT * APPENDING itab</answer3>
+  <answer4>SELECT * itab</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="To which context object is the attribute LEAD_SELECTION_INDEX related?">
+  <answer1>Supply function</answer1>
+  <answer2>Node</answer2>
+  <answer3>Attribute</answer3>
+  <answer4>Element</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="Which property of the InputField UI element must be bound to a context attribute?">
+  <answer1>state</answer1>
+  <answer2>enable</answer2>
+  <answer3>value</answer3>
+  <answer4>visible</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="An executable ABAP program contains a standard selection screen and uses the event blocks AT SELECTION-SCREEN, AT SELECTION-SCREEN OUTPUT, INITIALIZATION, START-OFSELECTION. In which sequence will ABAP runtime call these event blocks? ">
+  <answer1>1. AT SELECTION-SCREEN OUTPUT
+2. INITIALIZATION
+3. AT SELECTION-SCREEN
+4. START-OF-SELECTION</answer1>
+  <answer2>1. INITIALIZATION
+2. AT SELECTION-SCREEN
+3. AT SELECTION-SCREEN OUTPUT
+4. START-OF-SELECTION</answer2>
+  <answer3>1. INITIALIZATION
+2. AT SELECTION-SCREEN OUTPUT
+3. AT SELECTION-SCREEN
+4. START-OF-SELECTION</answer3>
+  <answer4>1. INITIALIZATION
+2. AT SELECTION-SCREEN OUTPUT
+3. START-OF-SELECTION
+4. AT SELECTION-SCREEN</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="What can you change in the ABAP Debugger?">
+  <answer1>Content of an internal table</answer1>
+  <answer2>Value of a reference variable</answer2>
+  <answer3>Value of a constant</answer3>
+  <answer4>Definition of a structure</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="You want to use a BAdI to extend the functions of an SAP program. Which of the following tasks is necessary? ">
+  <answer1>Call the BAdI</answer1>
+  <answer2>Create an enhancement project using a customer exit</answer2>
+  <answer3>Define an interface for the BAdI</answer3>
+  <answer4>Implement a class that implements the BAdI interface</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="Which hook method exists for all controller types?">
+  <answer1>wddoonclose( )</answer1>
+  <answer2>wddoinit( )</answer2>
+  <answer3>wddobeforenavigation( )</answer3>
+  <answer4>wddoonopen( )</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="After a successful SELECT statement, what does SY-SUBRC equal?">
+  <answer1>0</answer1>
+  <answer2>4</answer2>
+  <answer3>8</answer3>
+  <answer4>Null</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="Which data type is allowed for the reference field of the Currency field?">
+  <answer1>UNIT</answer1>
+  <answer2>CUKY</answer2>
+  <answer3>DEC</answer3>
+  <answer4>CURR</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="How can you declare an internal table using the transparent table A as its line type?">
+  <answer1>DATA gt_itab TYPE LINE OF a</answer1>
+  <answer2>DATA gt_itab TYPE REF TO a</answer2>
+  <answer3>DATA gt_itab TYPE TABLE OF a</answer3>
+  <answer4>DATA gt_itab TYPE a</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="Which SELECT statement will always bypass the SAP table buffers?">
+  <answer1>SELECT '' ENDSELECT</answer1>
+  <answer2>SELECT '' SINGLE ''</answer2>
+  <answer3>SELECT '' INTO TABLE ''</answer3>
+  <answer4>SELECT '' FOR UPDATE ''</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="How can you improve the performance when accessing a large data volume database table?">
+  <answer1>Apply the appropriate data class and size category</answer1>
+  <answer2>Switch the database table to fully buffered</answer2>
+  <answer3>Define appropriate indexes for the database table</answer3>
+  <answer4>Change the table type in the dictionary</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="You want to define two database tables with different structures. Both tables should contain the fields CHANGE_DATE and CHANGE_TIME. How do you implement this in order to minimize the maintenance effort? ">
+  <answer1>Define a structure with these two fields and include this structure in both database tables</answer1>
+  <answer2>Define an append structure with these two fields and assign this append structure to both database tables</answer2>
+  <answer3>Define the two fields in each database table separately</answer3>
+  <answer4>Define the two fields in one database table and copy them to the other database table</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="Which statement is used to generically define the data reference variable z1?">
+  <answer1>data z1 type any</answer1>
+  <answer2>data z1 type any table</answer2>
+  <answer3>data z1 type ref to PA0001</answer3>
+  <answer4>data z1 type ref to data</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="dbtab is a transparent table. What is declared by the following statement? DATA myvar TYPE dbtab ">
+  <answer1>A structure variable</answer1>
+  <answer2>An elementary field</answer2>
+  <answer3>An internal table</answer3>
+  <answer4>A reference to an internal table</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="You want to create a transparent table in the ABAP dictionary. When is the table physically created in the database?">
+  <answer1>When you save the table</answer1>
+  <answer2>When you activate the table</answer2>
+  <answer3>When you run the database utility transaction (SE14)</answer3>
+  <answer4>When you insert the table name and select Create</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="You are writing a function module that will be called from external systems via remote function call (RFC). How do you report an error back to the external caller?">
+  <answer1>Write the error data into a CHANGING parameter that is passed by value.</answer1>
+  <answer2>Write the error data into an EXPORTING parameter that is passed by reference.</answer2>
+  <answer3>Write the error data into a TABLES parameter that is passed by reference.</answer3>
+  <answer4>Write the error data into a RECEIVING parameter that is passed by value.</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="You defined data reference z1 generically. Which statement would you use to access the content of the referenced variable? ">
+  <answer1>Assign (z1) to &lt;fs&gt;</answer1>
+  <answer2>Assign z1 to &lt;fs&gt;</answer2>
+  <answer3>Assign z1-&gt;* to &lt;fs&gt;</answer3>
+  <answer4>Get reference of z1 into wa</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="How do you embed a subscreen in a main screen?">
+  <answer1>Use SET SUBSCREEN in a PBO module of the main screen</answer1>
+  <answer2>Use SET SUBSCREEN in the flow logic of the main screen</answer2>
+  <answer3>Use CALL SUBSCREEN in the flow logic of the main screen</answer3>
+  <answer4>Use CALL SUBSCREEN in a PBO module of the main screen</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="Which of the following characters is the first of a menu exit function code?">
+  <answer1>&amp;</answer1>
+  <answer2>*</answer2>
+  <answer3>+</answer3>
+  <answer4>-</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="Which objects can share data through context mapping?">
+  <answer1>View controller and another view controller</answer1>
+  <answer2>Component controllers and view controllers</answer2>
+  <answer3>Custom controllers and transparent tables</answer3>
+  <answer4>Global classes and component controllers</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="Which of the following variables is the self-reference variable in ABAP OO?">
+  <answer1>THIS</answer1>
+  <answer2>SENDER</answer2>
+  <answer3>ME</answer3>
+  <answer4>SUPER</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="How do you add fields to an SAP-delivered transparent table without modification?">
+  <answer1>Use the database utility to enhance the definition on the database directly</answer1>
+  <answer2>Add the new fields to the table definition</answer2>
+  <answer3>Create an append structure containing the new fields</answer3>
+  <answer4>Define a structure containing the new fields and include it in the table definition</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="Within the source code of a function module, errors are handled via the keyword:">
+  <answer1>EXCEPTION</answer1>
+  <answer2>RAISE</answer2>
+  <answer3>STOP</answer3>
+  <answer4>ABEND</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="Which of the following describes the internal representation of a type D data object?">
+  <answer1>DDMMYYYY</answer1>
+  <answer2>YYYYDDMM</answer2>
+  <answer3>MMDDYYYY</answer3>
+  <answer4>YYYYMMDD</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="In regard to PERFORM, which of the following is NOT a true statement?">
+  <answer1>May be used within a subroutine</answer1>
+  <answer2>Requires actual parameters</answer2>
+  <answer3>Recursive calls are allowed in ABAP</answer3>
+  <answer4>Can call a subroutine in another program</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="DOG is a subclass of ANIMAL. You have created a variable of type ANIMAL that references an instance of the DOG class. Which of the following statements can you use to copy this reference to a new variable of type DOG?">
+  <answer1>MOVE… ?TO…</answer1>
+  <answer2>MOVE-CORRESPONDING… TO…</answer2>
+  <answer3>MOVE… TO…</answer3>
+  <answer4>WRITE…. TO….</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="Which ABAP statement can make an element visible that you statically defined as invisible?">
+  <answer1>SCREEN-INVISIBLE = 1.</answer1>
+  <answer2>SCREEN-ACTIVE = 1.</answer2>
+  <answer3>SCREEN-ACTIVE = 0.</answer3>
+  <answer4>SCREEN-INVISIBLE = 0.</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="Which of the following values are replaceable in debugger mode?">
+  <answer1>Variables. </answer1>
+  <answer2>Tables names.</answer2>
+  <answer3>Field names.</answer3>
+  <answer4>Constants.</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="When is a foreign key check performed on an input/output field?">
+  <answer1>If the field refers to a dictionary field for which a search help is defined.</answer1>
+  <answer2>If the field refers to a dictionary field for which an append search is defined.</answer2>
+  <answer3>If the field refers to a dictionary field for which a check table is defined.</answer3>
+  <answer4>If the field refers to a dictionary field for which a value help is defined.</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="You want to translate dynamic text in a web Dynpro. From which abstract class should you inherit?">
+  <answer1>CL_WD_COMPONENT_ASSISTANCE. </answer1>
+  <answer2>CL_WD_CONFIGURATION_MODEL.</answer2>
+  <answer3>CL_WD_CONTEXT_SERVICES.</answer3>
+  <answer4>CL_WD_COMPONENT_SERVICES.</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="When does SAP recommend that you use a full buffering type for a database table?">
+  <answer1>When the Table is very small and seldom written. </answer1>
+  <answer2>When the table is very large and frequently written.</answer2>
+  <answer3>When the table is very large and seldom written.</answer3>
+  <answer4>When the table is very small and frequently written.</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="Which task does the dispatcher perform?">
+  <answer1>Executes programs that run without user interaction</answer1>
+  <answer2>Verifies the correctness of ABAP programs</answer2>
+  <answer3>Distributes requests to the work process</answer3>
+  <answer4>Administrates the lock table in the shared memory</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="What is the transaction code for the ABAP Editor?">
+  <answer1>SE11</answer1>
+  <answer2>SE38</answer2>
+  <answer3>SE36</answer3>
+  <answer4>SE16</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="The complete technical definition of a table field is determined by the field's:">
+  <answer1>Domain</answer1>
+  <answer2>Field name</answer2>
+  <answer3>Data type</answer3>
+  <answer4>Data element </answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="The following code indicates:  SELECT fld6 fld3 fld2 fld1 FROM tab1 INTO CORRESPONDING FIELDS OF TABLE itab  WHERE fld3 = pfld3 ">
+  <answer1>The order of the fields in itab does not matter</answer1>
+  <answer2>Fill the header line of itab, but not the body</answer2>
+  <answer3>Table itab can only contain fields also in table tab1</answer3>
+  <answer4>None of the above</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="In an ABAP program, you want to assign an initial value to an elementary data object when you define it. Which addition must you use?">
+  <answer1>DEFAULT</answer1>
+  <answer2>READ-ONLY</answer2>
+  <answer3>OBLIGATORY</answer3>
+  <answer4>VALUE</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="Which of the following can you do with the SAP Code Inspector?">
+  <answer1>Analyze runtime data.</answer1>
+  <answer2>Monitor background tasks.</answer2>
+  <answer3>Monitor runtime behavior.</answer3>
+  <answer4>Perform static code checks. </answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="You define a generic variable that can hold the ABAP types C, D, N, STRING and T. You want to restrict the use of other ABAP types. Which generic data type must you use in the definition?">
+  <answer1>CSEQUENCE</answer1>
+  <answer2>SIMPLE</answer2>
+  <answer3>CLIKE</answer3>
+  <answer4>DATA</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="Which action on the underlying dictionary object triggers a database table conversion?">
+  <answer1>Inserting a field of type reference</answer1>
+  <answer2>Reducing the size of a field</answer2>
+  <answer3>Inserting an append structure</answer3>
+  <answer4>Changing the order of non-key fields</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="How would you define a method of an ABAP class to prevent this method from being available in a subclass?">
+  <answer1>Private</answer1>
+  <answer2>Final</answer2>
+  <answer3>Abstract</answer3>
+  <answer4>Protected</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="You want to define a formal parameter to a subroutine that accepts only internal tables of type standard and type sorted as actual parameters. Which of the following generic ABAP types must you use?">
+  <answer1>Hashed table</answer1>
+  <answer2>Sorted table</answer2>
+  <answer3>Standard table</answer3>
+  <answer4>Index table</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="You want to add a field of type CURR to a transparent table. What else you must do?">
+  <answer1>Create a reference to a field of type CUKY</answer1>
+  <answer2>Add a key field of type CUKY</answer2>
+  <answer3>Create a new field CUKY as a predefined type</answer3>
+  <answer4>Add a check table that contains a field of type CUKY</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="You want to develop a validation for a selection screen field. If a wrong value is entered into the field an error message should be displayed and the focus should move to the field. Which event do you use to achieve this?">
+  <answer1>AT SELECTION-SCREEN</answer1>
+  <answer2>END-OF-SELECTION</answer2>
+  <answer3>INITIALIZATION</answer3>
+  <answer4>START-OF-SELECTION</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="When are changes to the VB* tables transferred to the database?">
+  <answer1>When the main program is executed.</answer1>
+  <answer2>When the enqueue work process is executed.</answer2>
+  <answer3> When the update work process is executed. </answer3>
+  <answer4>When an update function module is executed.</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="What can be exposed in the component interface of a Web dynpro component?">
+  <answer1>Custom method of the component controller.</answer1>
+  <answer2>Context nodes of WINDOW controllers.</answer2>
+  <answer3>Public attributes of WINDOW controllers.</answer3>
+  <answer4>Standard hook method of the component controller. </answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="The component interface of a Web Dynpro component contains three interface views. Which of the following controllers must also exist?">
+  <answer1>Three window controllers.</answer1>
+  <answer2>One custom controller.</answer2>
+  <answer3>One configuration controller.</answer3>
+  <answer4>Three component controllers.</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="In which controller type can you embed a services call?">
+  <answer1>Component  controller. </answer1>
+  <answer2>Configuration controller.</answer2>
+  <answer3>Interface controller.</answer3>
+  <answer4>View controller.</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="You want to include an element of type ‘Table’ in your Web Dynpro. Which action adds the corresponding columns to the table automatically?">
+  <answer1>Generate a ‘BIND_TABLE’ method using the Web Dynpro method wizard.</answer1>
+  <answer2>Bind the table attributes ‘DATA_SOURCE’ to the cotext node.</answer2>
+  <answer3>Include the method ‘BIND_TABLE’ of IF_WD_CONTEXT_NODE.</answer3>
+  <answer4>Right click the table and select the ‘CREATE BINDING’ option.</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="Which of the following transactions can you use to define transparent tables?">
+  <answer1>SE16N</answer1>
+  <answer2>SE38</answer2>
+  <answer3>SM37</answer3>
+  <answer4>SE11</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="A structure has enhancement category 3: Can be enhanced (character -type). Which set of elementary types is allowed for the new fields?">
+  <answer1>D, I, STRING, T</answer1>
+  <answer2>C, D, N, X</answer2>
+  <answer3>C, D, N, T</answer3>
+  <answer4>F, I, P, X</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="Which statement ends a screen sequence and starts from the initial screen?">
+  <answer1>CALL SCREEN</answer1>
+  <answer2>SET SCREEN 0</answer2>
+  <answer3>LEAVE SCREEN</answer3>
+  <answer4>LEAVE TO SCREEN 0</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="Which of the following structures is created when you use a table type to define one of its components?">
+  <answer1>Flat structure</answer1>
+  <answer2>Nested structure</answer2>
+  <answer3>Append structure</answer3>
+  <answer4>Deep structure</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="Which of the following actions can be performed in the Process After Input (PAI) processing block?">
+  <answer1>Check the function code.</answer1>
+  <answer2>Modify screen attributes dynamically.</answer2>
+  <answer3>Set the GUI status of the screen.</answer3>
+  <answer4>Set the title bar.</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="Which of the following ABAP statements throws an error at the syntax check?">
+  <answer1>DATA variable(5) TYPE n.</answer1>
+  <answer2>DATA variable.</answer2>
+  <answer3>DATA variable(5) TYPE t.</answer3>
+  <answer4>DATA variable(5) TYPE p.</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="You display the content of an internal table using an ALV grid control. The content of the internal table changes during the program. Which CL_GUI_ALV_GRID class method can you use to display the changed content?">
+  <answer1>REFRESH_TABLE_DISPLAY in module PAI</answer1>
+  <answer2>SET_TABLE_FOR_FIRST_DISPLAY in module PBO</answer2>
+  <answer3>SET_TABLE_FOR_FIRST_DISPLAY in module PAI</answer3>
+  <answer4>REFRESH_TABLE_DISPLAY in module PBO</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="When does SAP recommend that you use a hashed table?">
+  <answer1>When a table must to be sorted automatically by key in ascending order</answer1>
+  <answer2>When a table must be accessible by both index and key</answer2>
+  <answer3>When a table is very large and you want to access the table by key only</answer3>
+  <answer4>When a table is very large ans you want to access the table by index only</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="Which of the following capabilities is provided by the Application Platform layer of SAP NetWeaver?">
+  <answer1>Business process management</answer1>
+  <answer2>Multi-channel access</answer2>
+  <answer3>Master data management</answer3>
+  <answer4>Database and operating system abstraction</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="To which of the following must you assign newly created SAP repository objects?">
+  <answer1>Package</answer1>
+  <answer2>Transport request</answer2>
+  <answer3>Transport task</answer3>
+  <answer4>Function group</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="You used Unified Modeling Language (UML) to design your classes. You want to describe the message exchange between objects. Which diagram type can you use?">
+  <answer1>Class diagram</answer1>
+  <answer2>Component diagram</answer2>
+  <answer3>Object diagram</answer3>
+  <answer4>Sequence diagram</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="Using the screen system table, what can you modify through a LOOP AT SCREEN… ENDLOOP construct?">
+  <answer1>Function codes of buttons.</answer1>
+  <answer2>Attributes of screen elements.</answer2>
+  <answer3>Screen status.</answer3>
+  <answer4>Values of screen elements.</answer4>
+  <corr>answer2</corr>
+</Question>
+<Question text="Which type of transport task is used when you modify SAP standard objects?">
+  <answer1>Workbench</answer1>
+  <answer2>Transport of copies</answer2>
+  <answer3>Repair</answer3>
+  <answer4>Development/Correction</answer4>
+  <corr>answer3</corr>
+</Question>
+<Question text="You want to check the user input in the field FIELD_NAME on a classical screen. If an incorrect value is entered, the user should be able to correct the field value.">
+  <answer1>FIELD field_name MODULE check_module</answer1>
+  <answer2>FIELD field_name MODULE check_module MESSAGE Ennn</answer2>
+  <answer3>CHAIN. MODULE check_module FIELD field_name. ENDCHAIN</answer3>
+  <answer4>MODULE check_module ON ERROR</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="Which of the following enhancement options does not require any preparation from SAP?">
+  <answer1>New BAdIs</answer1>
+  <answer2>Explicit enhancement point</answer2>
+  <answer3>Explicit enhancement sections</answer3>
+  <answer4>Implicit enhancement point</answer4>
+  <corr>answer4</corr>
+</Question>
+<Question text="In addition to the primary key of an internal table, how many secondary indexes can you define for an internal table?">
+  <answer1>15</answer1>
+  <answer2>0</answer2>
+  <answer3>1</answer3>
+  <answer4>10</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="Why should you bundle database updates in your dialog programs?">
+  <answer1>To process the SAP LUW within the database LUW to ensure data consistency</answer1>
+  <answer2>To be able to rollback database changes performed in the same dialog step</answer2>
+  <answer3>To avoid database locks set by an SQL statement that persists until the end of the program</answer3>
+  <answer4>To allow you to use SAP locks to ensure data consistency</answer4>
+  <corr>answer1</corr>
+</Question>
+<Question text="What process is used to establish the automatic transport of data between the view controller's context-attributes and the UI element in its layout?">
+  <answer1>Context mapping</answer1>
+  <answer2>Data migration</answer2>
+  <answer3>Data binding</answer3>
+  <answer4>View assembly</answer4>
+  <corr>answer3</corr>
+</Question>
+</Questions>
+
+

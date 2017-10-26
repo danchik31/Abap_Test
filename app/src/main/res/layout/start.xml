@@ -8,7 +8,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_margin="20dp">
         <View
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -19,26 +20,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Начать тестирование"
+            android:text="@string/start_button"
             android:background="@drawable/buttonstyle"
             android:layout_margin="2dp"/>
 
-        <Button
-            android:id="@+id/custom"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Настройки"
-            android:background="@drawable/buttonstyle"
-            android:layout_margin="2dp"/>
-
-        <Button
-            android:id="@+id/exit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Выход"
-            android:background="@drawable/buttonstyle"
-            android:layout_margin="2dp"/>
     </LinearLayout>
 
 

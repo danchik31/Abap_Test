@@ -1,8 +1,5 @@
 package com.example.dkurdamosov.abap_test;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -29,7 +26,7 @@ import java.util.Random;
     TextView answer_active;
     private  XmlParser xmlParser;
     private ArrayList<Question> questionList;
-    final private  String fileName = "questions";
+    final private  String fileName = "questions.xml";
     private int questionNumber;
     private String correctAnswer;
     private Question question;
@@ -61,6 +58,8 @@ import java.util.Random;
         answer_3 = (TextView) main.findViewById(R.id.answer3);
         answer_4 = (TextView) main.findViewById(R.id.answer4);
 
+        countTrue = 0;
+        countFalse = 0;
 //устанавливаем Listener
         answer_1.setOnClickListener(this);
         answer_2.setOnClickListener(this);
@@ -124,16 +123,16 @@ import java.util.Random;
 
         if (size != 0) {
             questionNumber+=1;
-            String val="Вопрос "+questionNumber+"/"+allQuestionCount;
+            String val=questionNumber+"/"+allQuestionCount;
             index = random.nextInt(size);
             question = questionList.get(index);
             correctAnswer=question.getCorrect_answer();
             question_cnt.setText(val);
             questionText.setText(question.getQuestion_text());
-            answer_1.setText("A:"+" "+question.getAnswer1());
-            answer_2.setText("B:"+" "+question.getAnswer2());
-            answer_3.setText("C:"+" "+question.getAnswer3());
-            answer_4.setText("D:"+" "+question.getAnswer4());
+            answer_1.setText(question.getAnswer1());
+            answer_2.setText(question.getAnswer2());
+            answer_3.setText(question.getAnswer3());
+            answer_4.setText(question.getAnswer4());
             answer_1.setClickable(true);
             answer_2.setClickable(true);
             answer_3.setClickable(true);
