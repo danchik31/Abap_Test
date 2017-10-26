@@ -7,5 +7,5 @@
     <string name="exit_button">Exit</string>
     <string name="question_num">Question</string>
     <string name="tryAgain">try again</string>
-    <string name="banner_ad_unit_id">ca-app-pub-6113180903766370~5219403523</string>
+    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-6113180903766370/7278590654</string>
 </resources>

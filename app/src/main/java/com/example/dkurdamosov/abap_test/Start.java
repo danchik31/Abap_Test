@@ -23,7 +23,7 @@ private Button start_btn;
         setContentView(R.layout.start);
 //Баннер
         mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
+        AdRequest adRequest = new AdRequest.Builder().addTestDevice("DA61B11555D514A51CE60F77D6B3282C").build();
         mAdView.loadAd(adRequest);
 
         start_btn = (Button)findViewById(R.id.start_btn);
