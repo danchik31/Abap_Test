@@ -53,6 +53,7 @@
         android:text="Как называется система ABAP555"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
+
         android:layout_margin="5dp"
         android:gravity="center"
         android:textSize="15sp"
@@ -66,15 +67,15 @@
         android:id="@+id/answer1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:clickable="true"
-        android:background="@drawable/back"
         android:layout_margin="2dp"
+        android:layout_weight="1"
+        android:background="@drawable/back"
+        android:clickable="true"
         android:gravity="fill_vertical"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:textSize="13sp"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:textSize="13sp" />
 
     <TextView
         android:id="@+id/answer2"

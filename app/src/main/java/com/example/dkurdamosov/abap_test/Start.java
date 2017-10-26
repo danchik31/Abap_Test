@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 
 /**
@@ -14,10 +16,16 @@ import android.widget.Button;
 
 public class Start extends AppCompatActivity implements View.OnClickListener{
 private Button start_btn;
+    private AdView mAdView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.start);
+//Баннер
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         start_btn = (Button)findViewById(R.id.start_btn);
         start_btn.setOnClickListener(this);
     }
