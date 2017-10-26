@@ -121,7 +121,7 @@ import java.util.Random;
         int size = questionList.size();
         int index;
 
-        if (size != 0) {
+        if ( size != 0) {
             questionNumber+=1;
             String val=questionNumber+"/"+allQuestionCount;
             index = random.nextInt(size);

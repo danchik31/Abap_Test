@@ -23,7 +23,7 @@ private Button start_btn;
         setContentView(R.layout.start);
 //Баннер
         mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().addTestDevice("DA61B11555D514A51CE60F77D6B3282C").build();
+        AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
         start_btn = (Button)findViewById(R.id.start_btn);
@@ -35,5 +35,23 @@ private Button start_btn;
         Intent intent = new Intent(this, Main.class);
         intent.addFlags(intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(intent);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mAdView.resume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mAdView.pause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mAdView.destroy();
     }
 }
