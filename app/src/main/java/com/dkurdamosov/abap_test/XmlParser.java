@@ -15,9 +15,11 @@ import java.util.ArrayList;
  */
 
 public class XmlParser {
-   private XmlPullParser parser;
+    private XmlPullParser parser;
+    private String text;
+    private String corr;
 
-    public XmlParser(String fileName)throws IOException, XmlPullParserException {
+    public XmlParser(String fileName) throws IOException, XmlPullParserException {
         parser = Xml.newPullParser();
         // получаем доступ к xml файлу
         InputStream inputStream = Main.getContext().getAssets().open(fileName);
@@ -25,7 +27,7 @@ public class XmlParser {
         parser.setInput(inputStream, null);
     }
 
-    public ArrayList<Question> getQuestionsList() throws XmlPullParserException, IOException{
+    public ArrayList<Question> getQuestionsList() throws XmlPullParserException, IOException {
         ArrayList<Question> questionList = new ArrayList<Question>();
         // получаем первое событие в xml файле
         int eventType = parser.getEventType();
@@ -42,46 +44,46 @@ public class XmlParser {
                 name = parser.getName();
                 if (name.equals("Question")) {
                     question = new Question();
-                    String text = parser.getAttributeValue(null, "text");
+                    text = parser.getAttributeValue(null, "text");
                     question.setQuestion_text(text);
 
-                } else if ( question != null) {
+                } else if (question != null) {
                     if (name.equals("answer1")) {
-                        String value = parser.nextText();
-                        question.setAnswer1(value);
+                        text = parser.nextText();
+                        corr = parser.getAttributeValue(null, "correct");
+                        question.setAnswer(1, text, corr);
 
                     } else if (name.equals("answer2")) {
-                        String value = parser.nextText();
-                        question.setAnswer2(value);
+                        text = parser.nextText();
+                        corr = parser.getAttributeValue(null, "correct");
+                        question.setAnswer(2, text, corr);
 
                     } else if (name.equals("answer3")) {
-                        String value = parser.nextText();
-                        question.setAnswer3(value);
+                        text = parser.nextText();
+                        corr = parser.getAttributeValue(null, "correct");
+                        question.setAnswer(3, text, corr);
 
-                    }else if (name.equals("answer4")) {
-                        String value = parser.nextText();
-                        question.setAnswer4(value);
+                    } else if (name.equals("answer4")) {
+                        text = parser.nextText();
+                        corr = parser.getAttributeValue(null, "correct");
+                        question.setAnswer(4, text, corr);
+                    }
 
-                    }else if (name.equals("corr")) {
-                        String value = parser.nextText();
-                        question.setCorrect_answer(value);
+                    // доходим до конца XML файла
+                } else if (eventType == XmlPullParser.END_TAG) {
+                    name = parser.getName();
+                    if (name.equalsIgnoreCase("Question") && question != null) {
+                        questionList.add(question);
                     }
                 }
 
-                // доходим до конца XML файла
-            } else if (eventType == XmlPullParser.END_TAG) {
-                name = parser.getName();
-                if (name.equalsIgnoreCase("Question") && question != null) {
-                    questionList.add(question);
-                }
+                // переходим к следующему событию внутри XML
+                eventType = parser.next();
             }
 
-            // переходим к следующему событию внутри XML
-            eventType = parser.next();
+
         }
 
         return questionList;
-
     }
-
 }

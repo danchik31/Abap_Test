@@ -7,78 +7,101 @@ package com.dkurdamosov.abap_test;
 public class Question {
 
     private String question_text;
-    private String answer1;
-    private String answer2;
-    private String answer3;
-    private String answer4;
-    private String correct_answer;
+    private String answers[][] ;
 
+    //конструктор
+    public void Question(){
+        //инизиализируем массив с вопросами
+        answers = new String[4][2];
+    }
+
+    //Возвращаем текст вопроса
     public String getQuestion_text() {
         return question_text;
     }
 
+    //Устанавливаем текст вопроса
     public void setQuestion_text(String question_text) {
+
         this.question_text = question_text;
     }
 
-    public String getAnswer1() {
-        return answer1;
+    //заполняем массив с ответами
+    public void setAnswer(int num, String text, String correct){
+
+        switch (num){
+            case 1:
+                answers[0][0] = text;
+                answers[0][1] = correct;
+                break;
+            case 2:
+                answers[1][0] = text;
+                answers[1][1] = correct;
+                break;
+            case 3:
+                answers[2][0] = text;
+                answers[2][1] = correct;
+                break;
+            case 4:
+                answers[3][0] = text;
+                answers[3][1] = correct;
+                break;
+        }
+
     }
 
-    public void setAnswer1(String answer1) {
-        this.answer1 = answer1;
+    //возвращаем текст ответа
+    public String getAnswer( int num){
+        String val = new String();
+        switch (num){
+            case 1:
+                val = answers[0][0];
+                break;
+            case 2:
+                val = answers[1][0];
+                break;
+            case 3:
+                val = answers[2][0];
+                break;
+            case 4:
+                val = answers[3][0];
+                break;
+        }
+
+        return val;
     }
 
-    public String getAnswer2() {
-        return answer2;
-    }
-
-    public void setAnswer2(String answer2) {
-        this.answer2 = answer2;
-    }
-
-    public String getAnswer3() {
-        return answer3;
-    }
-
-    public void setAnswer3(String answer3) {
-        this.answer3 = answer3;
-    }
-
-    public String getAnswer4() {
-        return answer4;
-    }
-
-    public void setAnswer4(String answer4) {
-        this.answer4 = answer4;
-    }
-
-    public String getCorrect_answer() {
-        return correct_answer;
-    }
-
-    public void setCorrect_answer(String correct_answer) {
-        this.correct_answer = correct_answer;
-    }
-
+    //проверяем правильный ли ответ
     public boolean isCorrectAnswer(int id) {
+
         boolean result=false;
 
         switch (id) {
-            case R.id.answer1:
-                if (correct_answer.equals("answer1")){result=true;}
+            case 1:
+                if (answers[0][1]!=""){result=true;}
                 break;
-            case R.id.answer2:
-                if (correct_answer.equals("answer2")){result=true;}
+            case 2:
+                if (answers[1][1]!=""){result=true;}
                 break;
-            case R.id.answer3:
-                if (correct_answer.equals("answer3")){result=true;}
+            case 3:
+                if (answers[2][1]!=""){result=true;}
                 break;
-            case R.id.answer4:
-                if (correct_answer.equals("answer4")){result=true;}
+            case 4:
+                if (answers[3][1]!=""){result=true;}
                 break;
 
         }
         return result;
+    }
+
+    //возвращаем количество правильных ответов
+    public int getCorrectAnswersCount(){
+        int count=0;
+        for (int i=0;i<4;i++){
+            if (answers[i][1].equals("x")){
+                count+=1;
+            }
+        }
+        return count;
     }
 }
