@@ -76,12 +76,10 @@ public class XmlParser {
                         questionList.add(question);
                     }
                 }
-
-                // переходим к следующему событию внутри XML
-                eventType = parser.next();
             }
 
-
+            // переходим к следующему событию внутри XML
+            eventType = parser.next();
         }
 
         return questionList;

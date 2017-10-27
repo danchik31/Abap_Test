@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Questions>
 <Question text="Which of the following tasks does the BADI implementing class perform?">
-<answer1>Filtering</answer1>
+<answer1 correct="x">Filtering</answer1>
 <answer2>Sequencing</answer2>
 <answer3>Inserting</answer3>
 <answer4>Deleting </answer4>
@@ -193,17 +193,17 @@ What do you have to do to eliminate the warning message?
   <corr>answer4</corr>
 </Question>
 <Question text="You create a function group ZATP. What is the name of the corresponding main program?">
-  <answer1>ZATP</answer1>
+  <answer1 correct="x">ZATP</answer1>
   <answer2>SAPLZATP</answer2>
   <answer3>SAPMZATP</answer3>
-  <answer4>SAPFZATP</answer4>
+  <answer4 correct="x">SAPFZATP</answer4>
   <corr>answer2</corr>
 </Question>
 <Question text="A field declared as type T has the following internal representation:">
   <answer1>SSMMHH</answer1>
-  <answer2>HHMMSS</answer2>
+  <answer2 correct="x">HHMMSS</answer2>
   <answer3>MMHHSS</answer3>
-  <answer4>HHSSMM</answer4>
+  <answer4 correct="x">HHSSMM</answer4>
   <corr>answer2</corr>
 </Question>
 <Question text="In regard to field selection, what option of the SELECT statement is required?">

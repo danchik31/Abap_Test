@@ -27,6 +27,7 @@ class Main_Controller implements View.OnClickListener {
     private ArrayList<Question> questionList;
     final private String fileName = "questions.xml";
     private int questionNumber;
+    private int countOfCorrectAnswers;
 
     private Question question;
 
@@ -83,9 +84,26 @@ class Main_Controller implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
+        int id=0;
+        countOfCorrectAnswers -= 1;
+
         answer_active = (TextView) view;
 
-        if (question.isCorrectAnswer(view.getId())) {
+        switch (view.getId()){
+            case R.id.answer1:
+                id=1;
+                break;
+            case R.id.answer2:
+                id=2;
+                break;
+            case R.id.answer3:
+                id=3;
+                break;
+            case R.id.answer4:
+                id=4;
+                break;
+        }
+        if (question.isCorrectAnswer(id)) {
             answer_active.setBackgroundResource(R.drawable.back_true);
             countTrue += 1;
         } else {
@@ -93,11 +111,17 @@ class Main_Controller implements View.OnClickListener {
             countFalse += 1;
         }
 
+        //если исчерпали количество правильных ответов, то запускаем новый вопрос
+        if (countOfCorrectAnswers == 0) {
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
-        answer_1.setClickable(false);
-        answer_2.setClickable(false);
-        answer_3.setClickable(false);
-        answer_4.setClickable(false);
+            newQuestion();
+        }
+
     }
 
     private void newQuestion() {
@@ -108,20 +132,20 @@ class Main_Controller implements View.OnClickListener {
         if (size != 0) {
             questionNumber += 1;
             String val = questionNumber + "/" + allQuestionCount;
-            index = random.nextInt(size);
+            //index = random.nextInt(size);
+            index=1;
             question = questionList.get(index);
 
+            //получаем кол-во правильных ответов
+            countOfCorrectAnswers = question.getCorrectAnswersCount();
+            //устанавливаем текстовки
             question_cnt.setText(val);
             questionText.setText(question.getQuestion_text());
             answer_1.setText(question.getAnswer(1));
             answer_2.setText(question.getAnswer(2));
             answer_3.setText(question.getAnswer(3));
             answer_4.setText(question.getAnswer(4));
-            answer_1.setClickable(true);
-            answer_2.setClickable(true);
-            answer_3.setClickable(true);
-            answer_4.setClickable(true);
-
+            //удаляем вопрос
             questionList.remove(index);
         } else {
 //Выдаем результаты
