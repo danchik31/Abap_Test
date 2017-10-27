@@ -1,4 +1,4 @@
-package com.example.dkurdamosov.abap_test;
+package com.dkurdamosov.abap_test;
 
 /**
  * Created by dkurdamosov on 20.10.2017.

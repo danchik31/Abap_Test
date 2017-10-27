@@ -1,4 +1,4 @@
-package com.example.dkurdamosov.abap_test;
+package com.dkurdamosov.abap_test;
 import android.content.Intent;
 import android.view.View;
 import android.view.animation.Animation;

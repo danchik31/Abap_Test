@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "25.0.3"
     defaultConfig {
-        applicationId "com.example.dkurdamosov.abap_test"
+        applicationId "com.dkurdamosov.abap_test"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
