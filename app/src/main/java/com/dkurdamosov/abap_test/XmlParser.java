@@ -43,32 +43,32 @@ public class XmlParser {
             } else if (eventType == XmlPullParser.START_TAG) {
                 name = parser.getName();
                 if (name.equals("Question")) {
-                    question = new Question();
+                    question = new Question( );
                     text = parser.getAttributeValue(null, "text");
                     question.setQuestion_text(text);
 
                 } else if (question != null) {
                     if (name.equals("answer1")) {
-                        text = parser.nextText();
                         corr = parser.getAttributeValue(null, "correct");
+                        text = parser.nextText();
                         question.setAnswer(1, text, corr);
 
                     } else if (name.equals("answer2")) {
-                        text = parser.nextText();
                         corr = parser.getAttributeValue(null, "correct");
+                        text = parser.nextText();
                         question.setAnswer(2, text, corr);
 
                     } else if (name.equals("answer3")) {
-                        text = parser.nextText();
                         corr = parser.getAttributeValue(null, "correct");
+                        text = parser.nextText();
                         question.setAnswer(3, text, corr);
 
                     } else if (name.equals("answer4")) {
-                        text = parser.nextText();
                         corr = parser.getAttributeValue(null, "correct");
+                        text = parser.nextText();
                         question.setAnswer(4, text, corr);
                     }
-
+                }
                     // доходим до конца XML файла
                 } else if (eventType == XmlPullParser.END_TAG) {
                     name = parser.getName();
@@ -76,7 +76,7 @@ public class XmlParser {
                         questionList.add(question);
                     }
                 }
-            }
+
 
             // переходим к следующему событию внутри XML
             eventType = parser.next();

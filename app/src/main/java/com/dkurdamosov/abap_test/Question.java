@@ -7,13 +7,12 @@ package com.dkurdamosov.abap_test;
 public class Question {
 
     private String question_text;
-    private String answers[][] ;
+    private String[][] answers;
 
-    //конструктор
-    public void Question(){
-        //инизиализируем массив с вопросами
-        answers = new String[4][2];
+    public Question() {
+        this.answers = new String[4][2];
     }
+
 
     //Возвращаем текст вопроса
     public String getQuestion_text() {
@@ -27,9 +26,11 @@ public class Question {
     }
 
     //заполняем массив с ответами
-    public void setAnswer(int num, String text, String correct){
-
-        switch (num){
+    public void setAnswer(int num, String text, String correct) {
+        if (correct == null) {
+            correct = "";
+        }
+        switch (num) {
             case 1:
                 answers[0][0] = text;
                 answers[0][1] = correct;
@@ -51,9 +52,9 @@ public class Question {
     }
 
     //возвращаем текст ответа
-    public String getAnswer( int num){
+    public String getAnswer(int num) {
         String val = new String();
-        switch (num){
+        switch (num) {
             case 1:
                 val = answers[0][0];
                 break;
@@ -74,20 +75,28 @@ public class Question {
     //проверяем правильный ли ответ
     public boolean isCorrectAnswer(int id) {
 
-        boolean result=false;
+        boolean result = false;
 
         switch (id) {
             case 1:
-                if (answers[0][1]!=""){result=true;}
+                if (answers[0][1] != "") {
+                    result = true;
+                }
                 break;
             case 2:
-                if (answers[1][1]!=""){result=true;}
+                if (answers[1][1] != "") {
+                    result = true;
+                }
                 break;
             case 3:
-                if (answers[2][1]!=""){result=true;}
+                if (answers[2][1] != "") {
+                    result = true;
+                }
                 break;
             case 4:
-                if (answers[3][1]!=""){result=true;}
+                if (answers[3][1] != "") {
+                    result = true;
+                }
                 break;
 
         }
@@ -95,11 +104,11 @@ public class Question {
     }
 
     //возвращаем количество правильных ответов
-    public int getCorrectAnswersCount(){
-        int count=0;
-        for (int i=0;i<4;i++){
-            if (answers[i][1].equals("x")){
-                count+=1;
+    public int getCorrectAnswersCount() {
+        int count = 0;
+        for (int i = 0; i < 4; i++) {
+            if (answers[i][1].equals("x")) {
+                count += 1;
             }
         }
         return count;

@@ -1,6 +1,7 @@
 package com.dkurdamosov.abap_test;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 
@@ -9,6 +10,7 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by dkurdamosov on 19.10.2017.
@@ -84,25 +86,26 @@ class Main_Controller implements View.OnClickListener {
     @Override
     public void onClick(View view) {
 
-        int id=0;
+        int id = 0;
         countOfCorrectAnswers -= 1;
 
         answer_active = (TextView) view;
 
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.answer1:
-                id=1;
+                id = 1;
                 break;
             case R.id.answer2:
-                id=2;
+                id = 2;
                 break;
             case R.id.answer3:
-                id=3;
+                id = 3;
                 break;
             case R.id.answer4:
-                id=4;
+                id = 4;
                 break;
         }
+
         if (question.isCorrectAnswer(id)) {
             answer_active.setBackgroundResource(R.drawable.back_true);
             countTrue += 1;
@@ -111,15 +114,18 @@ class Main_Controller implements View.OnClickListener {
             countFalse += 1;
         }
 
+
         //если исчерпали количество правильных ответов, то запускаем новый вопрос
         if (countOfCorrectAnswers == 0) {
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            setNoClicable();
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    newQuestion();
+                }
+            }, 1000);
 
-            newQuestion();
         }
 
     }
@@ -133,7 +139,7 @@ class Main_Controller implements View.OnClickListener {
             questionNumber += 1;
             String val = questionNumber + "/" + allQuestionCount;
             //index = random.nextInt(size);
-            index=1;
+            index = 1;
             question = questionList.get(index);
 
             //получаем кол-во правильных ответов
@@ -145,6 +151,10 @@ class Main_Controller implements View.OnClickListener {
             answer_2.setText(question.getAnswer(2));
             answer_3.setText(question.getAnswer(3));
             answer_4.setText(question.getAnswer(4));
+            answer_1.setBackgroundResource(R.drawable.back);
+            answer_2.setBackgroundResource(R.drawable.back);
+            answer_3.setBackgroundResource(R.drawable.back);
+            answer_4.setBackgroundResource(R.drawable.back);
             //удаляем вопрос
             questionList.remove(index);
         } else {
@@ -155,6 +165,12 @@ class Main_Controller implements View.OnClickListener {
 
             Main.getContext().startActivity(intent);
         }
+    }
+    private void setClicable(boolean val){
+        answer_1.setClickable(val);
+        answer_2.setClickable(val);
+        answer_3.setClickable(val);
+        answer_4.setClickable(val);
     }
 }
 
