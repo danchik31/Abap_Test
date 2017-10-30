@@ -117,14 +117,24 @@ class Main_Controller implements View.OnClickListener {
 
         //если исчерпали количество правильных ответов, то запускаем новый вопрос
         if (countOfCorrectAnswers == 0) {
-            setNoClicable();
+            //Делаем некликабельными ответы
+            setClicable(false);
+
             Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    //показываем правильный ответ
+                    setBackgroundTrueAnswers();
+                }
+            }, 500);
+
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     newQuestion();
                 }
-            }, 1000);
+            }, 2000);
 
         }
 
@@ -155,6 +165,7 @@ class Main_Controller implements View.OnClickListener {
             answer_2.setBackgroundResource(R.drawable.back);
             answer_3.setBackgroundResource(R.drawable.back);
             answer_4.setBackgroundResource(R.drawable.back);
+            setClicable(true);
             //удаляем вопрос
             questionList.remove(index);
         } else {
@@ -166,11 +177,27 @@ class Main_Controller implements View.OnClickListener {
             Main.getContext().startActivity(intent);
         }
     }
-    private void setClicable(boolean val){
+
+    private void setClicable(boolean val) {
         answer_1.setClickable(val);
         answer_2.setClickable(val);
         answer_3.setClickable(val);
         answer_4.setClickable(val);
+    }
+
+    private void setBackgroundTrueAnswers() {
+        if (question.isCorrectAnswer(1)) {
+            answer_1.setBackgroundResource(R.drawable.back_true);
+        }
+        if (question.isCorrectAnswer(2)) {
+            answer_2.setBackgroundResource(R.drawable.back_true);
+        }
+        if (question.isCorrectAnswer(3)) {
+            answer_3.setBackgroundResource(R.drawable.back_true);
+        }
+        if (question.isCorrectAnswer(4)) {
+            answer_4.setBackgroundResource(R.drawable.back_true);
+        }
     }
 }
 
